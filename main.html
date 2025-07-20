@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        iframe {
+            height:100vh;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; 
+        </div>
+        <iframe src="frame.html" name="f1" class="menu-frame" width="28px"></iframe>
+        <iframe src="index.html" name="f2" class="content-frame" width="70px"></iframe>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menuFrame = document.querySelector('.menu-frame');
+            menuFrame.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

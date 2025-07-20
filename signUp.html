@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="validate.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url("https://mdbootstrap.com/img/Photos/Others/sidenav2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(40, 40, 62, 0.5);
+            width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            color: #28283e;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #28283e;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #28283e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #43435c;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Sign Up</h2>
+        <form name="validationForm" onsubmit="return validate()">
+            <input type="text" name="fullName" placeholder="FullName" required><br>
+            <input type="email" name="email" placeholder="E-mail" required><br>
+            <input type="text" name="phNo" placeholder="PhoneNumber" required><br>
+            <input type="date" name="dob" placeholder="Date Of Birth" required><br>
+            <input type="text" name="userName" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" required><br>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

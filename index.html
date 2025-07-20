@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eterna Library</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+    <style>
+        p {
+            font-size: x-large;
+            border: 2px solid rgb(240, 246, 247);
+            padding: 10px; 
+            margin: 20px; 
+            background-color: #E6E6FF;
+        }
+        button {
+            height: 30px;
+            font-size: 14px;
+            width: 100px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #E6E6FF;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 align="center">
+        <font size="6" color="black" face="lucida">
+            Welcome to ETERNA LIBRARY: A World of Timeless Knowledge.
+        </font>
+    </h1>
+    <hr>
+
+    <p align="center">
+        Eterna Library is not just a place to store books—it's an immersive, digital library management system 
+        designed to bring the vast world of information at your fingertips. Whether you're a student, a researcher, 
+        or a book lover, Eterna Library provides seamless access to an expansive collection of resources, all organized 
+        and managed with cutting-edge technology.
+    </p>
+    <hr>
+
+    <marquee scrollamount="7" style="background-color:#E6E6FF">
+        <font size="5">
+            <b>New Arrivals: "The Future of AI" by John Doe | "Exploring the Universe" by Jane Smith | 
+            "The History of Civilization" by Mark Johnson | "The Art of Coding" by Alice Brown | 
+            "Understanding Quantum Physics" by Michael Green.</b>
+        </font>
+    </marquee>
+    <hr>
+
+    <h2 align="center">
+        New to Eterna Library? Sign Up to Get Started! Already a Member? Log In to Continue Exploring!
+    </h2>
+    <center>
+        <button><a href="signUp.html" target="f2">SIGN UP</a></button>
+        <button><a href="loginForm.html" target="f2">LOG IN</a></button>
+    </center>
+    <hr>
+
+    <center>
+        <h2>Which Genres Are You Interested In?</h2>
+        <form action="/submit_poll" onsubmit="changeColor(event)">
+            <label style="font-size: large;">
+                <input type="checkbox" name="genre" value="Fiction"> Fiction
+            </label>
+            <label style="font-size: large;">
+                <input type="checkbox" name="genre" value="Non-Fiction"> Non-Fiction
+            </label>
+            <label style="font-size: large;">
+                <input type="checkbox" name="genre" value="Science"> Science
+            </label>
+            <label style="font-size: large;">
+                <input type="checkbox" name="genre" value="History"> History
+            </label>
+            <label style="font-size: large;">
+                <input type="checkbox" name="genre" value="Mystery"> Mystery
+            </label>
+            <label style="font-size: large;">
+                <input type="checkbox" name="genre" value="Fantasy"> Fantasy
+            </label>
+            <label style="font-size: large;">
+                <input type="text" name="genre"> Other
+            </label>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </center>
+    <hr>
+
+    <h2>For any Information, Contact Us.</h2>
+    <p><b>Phone:</b> <a href="tel:6300434106">+91 6300434106</a></p>
+    <p><b>Email:</b> <a href="mailto:eternalibrary@gmail.com">eternalibrary@gmail.com</a></p>
+    <p><b>Address:</b> 123 Library Lane, Knowledge City, Bookland</p>
+    <p><b>Website:</b> <a href="https://www.eternalibrary.com">www.eternalibrary.com</a></p> 
+</body>
+</html>

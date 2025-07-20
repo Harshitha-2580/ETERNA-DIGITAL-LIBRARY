@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Results</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .book {
+            background-color: #E6E6FA; /* Light lavender background */
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .book a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .book a:hover {
+            background-color: #45a049;
+        }
+
+        .book:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #book-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="book-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const bookContainer = document.getElementById("book-container");
+            const books = JSON.parse(sessionStorage.getItem("searchResults")) || [];
+
+            books.forEach(book => {
+                const bookCard = document.createElement("div");
+                bookCard.classList.add("book");
+                bookCard.innerHTML = `
+                    <img src="${book.thumbnail}" alt="${book.title}">
+                    <h3>${book.title}</h3>
+                    <p><strong>Author(s):</strong> ${book.authors || "N/A"}</p>
+                    <p>${book.description || "No description available."}</p>
+                    <a href="${book.link}" target="_blank">Read More</a>
+                `;
+                bookContainer.appendChild(bookCard);
+            });
+        });
+    </script>
+</body>
+</html>
